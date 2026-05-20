@@ -6,29 +6,29 @@ const Services = () => {
       icon: MapPin,
       title: "GIS Solutions",
       description:
-        "Advanced geographic information systems for spatial analysis, mapping, and location intelligence that transform complex data into actionable insights.",
-      features: ["Spatial Analysis", "Custom Mapping", "Data Visualization", "Remote Sensing"],
+        "Advanced geographic information systems for tax consultancy, mapping, and location intelligence that transform complex data into actionable insights.",
+      features: ["Tax Consultancy", "Custom Mapping", "Data Visualization", "Remote Sensing"],
     },
     {
       icon: TrendingUp,
-      title: "SEO Optimization",
+      title: "Tax Consultancy",
       description:
-        "Data-driven search engine optimization strategies that boost your online visibility and drive organic traffic to your digital platforms.",
-      features: ["Keyword Research", "Technical SEO", "Content Strategy", "Analytics"],
+        "Practical tax advisory, reporting, and compliance support to keep decisions accurate and timely.",
+      features: ["Tax Planning", "Compliance Support", "Reporting", "Advisory"],
     },
     {
       icon: MessageSquare,
-      title: "Consultancy",
+      title: "Software Solutions",
       description:
-        "Expert guidance and strategic planning to help organizations leverage technology for sustainable growth and competitive advantage.",
-      features: ["Strategy Planning", "Process Optimization", "Digital Transformation", "Training"],
+        "Custom software tailored to your workflows, including portals, dashboards, and integrations.",
+      features: ["Custom Portals", "Workflow Automation", "System Integrations", "Dashboards"],
     },
     {
       icon: Code,
       title: "Development",
       description:
-        "Full-stack development solutions from web applications to custom software, built with modern technologies and best practices.",
-      features: ["Web Applications", "API Development", "Cloud Solutions", "Mobile Apps"],
+        "Full-stack development solutions for web applications, client portals, and internal tools built with modern technologies.",
+      features: ["Web Applications", "API Development", "Client Portals", "Mobile Apps"],
     },
   ];
 
@@ -43,12 +43,12 @@ const Services = () => {
             Our Expertise
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold mt-4 mb-6">
-            Comprehensive Solutions for
-            <span className="gradient-text block">Digital Excellence</span>
+            Services Built Around
+            <span className="gradient-text block">GIS & Software Delivery</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            We combine cutting-edge technology with industry expertise to deliver
-            solutions that drive measurable results.
+            We combine GIS expertise and software engineering to deliver outcomes
+            that are practical, fast, and easy to manage.
           </p>
         </div>
 

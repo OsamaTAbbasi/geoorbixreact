@@ -1,22 +1,25 @@
 import { Button } from "../components/ui/button";
 import { ArrowRight, Mail, MapPin, Phone } from "lucide-react";
+import { contactEmail, officeAddress, whatsappNumber, whatsappUrl } from "../lib/site";
 
 const Contact = () => {
   const contactInfo = [
     {
       icon: Mail,
       label: "Email Us",
-      value: "hello@geoorbix.com",
+      value: contactEmail,
+      href: `mailto:${contactEmail}`,
     },
     {
       icon: Phone,
-      label: "Call Us",
-      value: "+1 (555) 123-4567",
+      label: "WhatsApp Us",
+      value: whatsappNumber,
+      href: whatsappUrl,
     },
     {
       icon: MapPin,
       label: "Visit Us",
-      value: "123 Tech Hub, Innovation City",
+      value: officeAddress,
     },
   ];
 
@@ -34,12 +37,12 @@ const Contact = () => {
               Get In Touch
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-4 mb-6">
-              Ready to Start Your
+              Ready to discuss your
               <span className="gradient-text block">Next Project?</span>
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-              Let's discuss how Geoorbix Technologies can help transform your ideas
-              into reality. Reach out today for a free consultation.
+              Let's discuss how Geo Orbix Technologies can support your GIS,
+              analytics, or digital delivery needs.
             </p>
           </div>
 
@@ -49,30 +52,57 @@ const Contact = () => {
               Schedule a Free Consultation
             </h3>
             <p className="text-muted-foreground mb-8 max-w-lg mx-auto">
-              Our experts are ready to understand your challenges and propose
-              tailored solutions that drive results.
+              Our team is ready to understand your needs and provide clear next steps
+              for GIS projects, analytics, or development support.
             </p>
-            <Button variant="hero" size="xl">
-              Book a Meeting
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button variant="hero" size="xl" asChild>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Chat with us on WhatsApp
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
+            <div className="mt-4">
+              <Button variant="heroOutline" size="xl" asChild>
+                <a href={`mailto:${contactEmail}`}>
+                  Mail Us
+                </a>
+              </Button>
+            </div>
           </div>
 
           {/* Contact Info */}
           <div className="grid md:grid-cols-3 gap-6 mt-12">
             {contactInfo.map((info, index) => (
-              <div
-                key={index}
-                className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/30 transition-colors group"
-              >
-                <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
-                  <info.icon className="h-5 w-5 text-primary" />
+              info.href ? (
+                <a
+                  key={index}
+                  href={info.href}
+                  target={info.label === "WhatsApp Us" ? "_blank" : undefined}
+                  rel={info.label === "WhatsApp Us" ? "noreferrer" : undefined}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 hover:border-primary/30 transition-colors group"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center group-hover:bg-primary/20 transition-colors">
+                    <info.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{info.label}</div>
+                    <div className="font-medium text-foreground">{info.value}</div>
+                  </div>
+                </a>
+              ) : (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 p-4 rounded-xl bg-secondary/30 border border-border/50 transition-colors group"
+                >
+                  <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-primary/10 border border-primary/20 flex items-center justify-center transition-colors">
+                    <info.icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <div>
+                    <div className="text-sm text-muted-foreground">{info.label}</div>
+                    <div className="font-medium text-foreground">{info.value}</div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-sm text-muted-foreground">{info.label}</div>
-                  <div className="font-medium text-foreground">{info.value}</div>
-                </div>
-              </div>
+              )
             ))}
           </div>
         </div>

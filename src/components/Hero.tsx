@@ -1,12 +1,13 @@
 import { Button } from "../components/ui/button";
-import { ArrowRight, MapPin, TrendingUp, Code, Users } from "lucide-react";
+import { ArrowRight, MapPin, Users, Layers } from "lucide-react";
 import heroBg from "../assets/hero-bg.jpg";
+import { contactEmail, whatsappUrl } from "../lib/site";
 
 const Hero = () => {
   const stats = [
-    { icon: MapPin, value: "500+", label: "GIS Projects" },
-    { icon: TrendingUp, value: "200%", label: "Avg. SEO Growth" },
-    { icon: Users, value: "150+", label: "Happy Clients" },
+    { icon: MapPin, value: "50+", label: "GIS Projects" },
+    { icon: Users, value: "15-20", label: "Clients" },
+    { icon: Layers, value: "3+", label: "Service Lines" },
   ];
 
   return (
@@ -32,30 +33,37 @@ const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 mb-8 animate-fade-in">
             <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
             <span className="text-sm font-medium text-primary">
-              Transforming Spatial Intelligence
+              Geo Orbix Technologies
             </span>
           </div>
 
           {/* Headline */}
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold mb-6 animate-slide-up">
-            Navigate Your Digital
-            <span className="block gradient-text mt-2">Future with Precision</span>
+            GIS Intelligence
+            <span className="block gradient-text mt-2">and Software Solutions</span>
           </h1>
 
           {/* Subheadline */}
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-10 animate-slide-up animation-delay-200">
-            From geographic intelligence to digital growth, we provide comprehensive
-            GIS, SEO, consultancy, and development solutions that drive results.
+            We deliver GIS solutions and custom software development that help teams
+            act on data with confidence and move faster.
           </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up animation-delay-400">
-            <Button variant="hero" size="xl">
-              Start Your Project
-              <ArrowRight className="ml-2 h-5 w-5" />
+            <Button variant="hero" size="xl" asChild>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Chat with us on WhatsApp
+                <ArrowRight className="ml-2 h-5 w-5" />
+              </a>
             </Button>
-            <Button variant="heroOutline" size="xl">
-              Explore Services
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href={`mailto:${contactEmail}`}>
+                Mail Us
+              </a>
+            </Button>
+            <Button variant="heroOutline" size="xl" asChild>
+              <a href="#services">Explore Services</a>
             </Button>
           </div>
 
