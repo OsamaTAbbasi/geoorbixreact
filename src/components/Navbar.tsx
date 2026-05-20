@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Button } from "../components/ui/button";
-import { Menu, X, Globe } from "lucide-react";
+import { Menu, X } from "lucide-react";
+import BrandMark from "./BrandMark";
+import { whatsappUrl } from "../lib/site";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const navLinks = [
-    { name: "Services", href: "#services" },
-    { name: "About", href: "#about" },
-    { name: "Contact", href: "#contact" },
+    { name: "Services", href: "/#services" },
+    { name: "About", href: "/#about" },
+    { name: "Contact", href: "/#contact" },
   ];
 
   return (
@@ -16,14 +18,8 @@ const Navbar = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2 group">
-            <div className="relative">
-              <Globe className="h-8 w-8 text-primary transition-transform duration-500 group-hover:rotate-180" />
-              <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg opacity-0 group-hover:opacity-100 transition-opacity" />
-            </div>
-            <span className="text-xl font-display font-bold gradient-text">
-              Geoorbix
-            </span>
+          <a href="/" className="block group max-w-[70vw]">
+            <BrandMark className="transition-transform duration-300 group-hover:-translate-y-0.5" />
           </a>
 
           {/* Desktop Navigation */}
@@ -37,8 +33,10 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button variant="hero" size="default">
-              Get Started
+            <Button variant="hero" size="default" asChild>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                WhatsApp Us
+              </a>
             </Button>
           </div>
 
@@ -65,8 +63,10 @@ const Navbar = () => {
                   {link.name}
                 </a>
               ))}
-              <Button variant="hero" size="lg" className="mt-2">
-                Get Started
+              <Button variant="hero" size="lg" className="mt-2" asChild>
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}>
+                  WhatsApp Us
+                </a>
               </Button>
             </div>
           </div>

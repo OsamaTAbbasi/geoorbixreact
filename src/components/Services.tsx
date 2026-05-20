@@ -11,24 +11,24 @@ const Services = () => {
     },
     {
       icon: TrendingUp,
-      title: "SEO Optimization",
+      title: "Spatial Analytics",
       description:
-        "Data-driven search engine optimization strategies that boost your online visibility and drive organic traffic to your digital platforms.",
-      features: ["Keyword Research", "Technical SEO", "Content Strategy", "Analytics"],
+        "Actionable insights from spatial data, dashboards, and reporting to support planning and execution.",
+      features: ["Dashboards", "Data Modeling", "Reporting", "Decision Support"],
     },
     {
       icon: MessageSquare,
-      title: "Consultancy",
+      title: "Software Solutions",
       description:
-        "Expert guidance and strategic planning to help organizations leverage technology for sustainable growth and competitive advantage.",
-      features: ["Strategy Planning", "Process Optimization", "Digital Transformation", "Training"],
+        "Custom software tailored to your workflows, including portals, dashboards, and integrations.",
+      features: ["Custom Portals", "Workflow Automation", "System Integrations", "Dashboards"],
     },
     {
       icon: Code,
       title: "Development",
       description:
-        "Full-stack development solutions from web applications to custom software, built with modern technologies and best practices.",
-      features: ["Web Applications", "API Development", "Cloud Solutions", "Mobile Apps"],
+        "Full-stack development solutions for web applications, client portals, and internal tools built with modern technologies.",
+      features: ["Web Applications", "API Development", "Client Portals", "Mobile Apps"],
     },
   ];
 
@@ -43,12 +43,12 @@ const Services = () => {
             Our Expertise
           </span>
           <h2 className="text-3xl md:text-5xl font-display font-bold mt-4 mb-6">
-            Comprehensive Solutions for
-            <span className="gradient-text block">Digital Excellence</span>
+            Services Built Around
+            <span className="gradient-text block">GIS & Software Delivery</span>
           </h2>
           <p className="text-muted-foreground text-lg">
-            We combine cutting-edge technology with industry expertise to deliver
-            solutions that drive measurable results.
+            We combine GIS expertise and software engineering to deliver outcomes
+            that are practical, fast, and easy to manage.
           </p>
         </div>
 

@@ -1,18 +1,20 @@
-import { Globe, Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import BrandMark from "./BrandMark";
+import { brandName, contactEmail, whatsappUrl } from "../lib/site";
 
 const Footer = () => {
   const links = {
     services: [
-      { name: "GIS Solutions", href: "#services" },
-      { name: "SEO Optimization", href: "#services" },
-      { name: "Consultancy", href: "#services" },
-      { name: "Development", href: "#services" },
+      { name: "GIS Solutions", href: "/#services" },
+      { name: "Spatial Analytics", href: "/#services" },
+      { name: "Consultancy", href: "/#services" },
+      { name: "Development", href: "/#services" },
     ],
     company: [
-      { name: "About Us", href: "#about" },
-      { name: "Careers", href: "#" },
-      { name: "Blog", href: "#" },
-      { name: "Contact", href: "#contact" },
+      { name: "About Us", href: "/about" },
+      { name: "Careers", href: "/careers" },
+      { name: "Blog", href: "/blog" },
+      { name: "Contact", href: "/contact" },
     ],
     social: [
       { icon: Linkedin, href: "#", label: "LinkedIn" },
@@ -28,22 +30,19 @@ const Footer = () => {
         <div className="grid md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <a href="#" className="flex items-center gap-2 mb-4">
-              <Globe className="h-8 w-8 text-primary" />
-              <span className="text-xl font-display font-bold gradient-text">
-                Geoorbix
-              </span>
+            <a href="#" className="block mb-4 max-w-full">
+              <BrandMark />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              Transforming spatial intelligence and digital presence through
-              innovative GIS, SEO, consultancy, and development solutions.
+              GIS solutions, spatial analytics, and digital delivery support built to
+              help teams move from data to outcomes.
             </p>
             {/* Social Links */}
             <div className="flex items-center gap-3">
               {links.social.map((social, index) => (
                 <a
                   key={index}
-                  href={social.href}
+                  href={social.label === "Email" ? `mailto:${contactEmail}` : social.href}
                   aria-label={social.label}
                   className="w-10 h-10 rounded-lg bg-secondary border border-border/50 flex items-center justify-center text-muted-foreground hover:text-primary hover:border-primary/30 transition-all"
                 >
@@ -51,6 +50,14 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-2 mt-6 text-sm text-primary hover:underline"
+            >
+              WhatsApp support available
+            </a>
           </div>
 
           {/* Services Column */}
@@ -95,13 +102,13 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-12 pt-8 border-t border-border/50 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Geoorbix Technologies. All rights reserved.
+            © {new Date().getFullYear()} {brandName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
               Privacy Policy
             </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+            <a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
               Terms of Service
             </a>
           </div>

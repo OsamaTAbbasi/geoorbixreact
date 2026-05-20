@@ -4,32 +4,31 @@ const About = () => {
   const reasons = [
     {
       icon: Globe,
-      title: "Global Perspective",
-      description: "Worldwide experience with diverse projects across multiple industries and geographies.",
+      title: "Geo-Spatial Focus",
+      description: "Deep expertise in spatial data, mapping, and analysis for mission-critical work.",
     },
     {
       icon: Zap,
-      title: "Cutting-Edge Technology",
-      description: "We leverage the latest tools and methodologies to deliver innovative solutions.",
+      title: "Fast Turnaround",
+      description: "Efficient delivery and crisp communication for complex project timelines.",
     },
     {
       icon: Shield,
       title: "Reliable & Secure",
-      description: "Enterprise-grade security and reliability you can count on for mission-critical projects.",
+      description: "Sensitive client information is handled carefully with a focus on trust and privacy.",
     },
     {
       icon: Award,
       title: "Proven Results",
-      description: "Track record of successful projects with measurable outcomes and satisfied clients.",
+      description: "A growing record of successful GIS projects and strategic engagements.",
     },
   ];
 
   const highlights = [
-    "Industry-leading expertise in GIS and geospatial technologies",
-    "Transparent communication and collaborative approach",
-    "Tailored solutions that fit your unique requirements",
-    "Dedicated support throughout and beyond project completion",
-    "Commitment to innovation and continuous improvement",
+    "GIS project delivery with practical reporting",
+    "Transparent communication and quick responses",
+    "Tailored advice for individuals and businesses",
+    "Dedicated support throughout the engagement",
   ];
 
   return (
@@ -41,17 +40,16 @@ const About = () => {
           {/* Left Column */}
           <div>
             <span className="text-primary font-medium text-sm uppercase tracking-wider">
-              Why Geoorbix
+              Why Geo Orbix
             </span>
             <h2 className="text-3xl md:text-5xl font-display font-bold mt-4 mb-6">
               Your Partner in
-              <span className="gradient-text block">Digital Transformation</span>
+              <span className="gradient-text block">GIS & Software Solutions</span>
             </h2>
             <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
-              At Geoorbix Technologies, we believe in the power of precision. Whether
-              mapping the world or mapping your success online, our multidisciplinary
-              team brings together expertise in geospatial intelligence, digital
-              marketing, strategic consulting, and software development.
+              At Geo Orbix Technologies, we deliver GIS projects and software solutions
+              with clarity. Our team combines geospatial insight, engineering, and
+              hands-on support so clients get results without the usual noise.
             </p>
 
             {/* Highlights */}
