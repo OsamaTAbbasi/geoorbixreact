@@ -57,7 +57,7 @@ const Contact = () => {
             </p>
             <Button variant="hero" size="xl" asChild>
               <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                Chat with us on WhatsApp
+                Chat on WhatsApp
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>

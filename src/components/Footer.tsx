@@ -6,8 +6,8 @@ const Footer = () => {
   const links = {
     services: [
       { name: "GIS Solutions", href: "/#services" },
-      { name: "Tax Consultancy", href: "/#services" },
       { name: "Consultancy", href: "/#services" },
+      { name: "Software Solutions", href: "/#services" },
       { name: "Development", href: "/#services" },
     ],
     company: [
@@ -38,7 +38,7 @@ const Footer = () => {
               <BrandMark />
             </a>
             <p className="text-muted-foreground mb-6 max-w-sm">
-              GIS solutions, tax consultancy, and digital delivery support built to
+              GIS solutions, consultancy, and digital delivery support built to
               help teams move from data to outcomes.
             </p>
             {/* Social Links */}
@@ -60,7 +60,7 @@ const Footer = () => {
               rel="noreferrer"
               className="inline-flex items-center gap-2 mt-6 text-sm text-primary hover:underline"
             >
-              Chat with us on WhatsApp
+              Chat on WhatsApp
             </a>
           </div>
 

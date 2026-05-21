@@ -53,7 +53,7 @@ const Hero = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16 animate-slide-up animation-delay-400">
             <Button variant="hero" size="xl" asChild>
               <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                Chat with us on WhatsApp
+                Chat on WhatsApp
                 <ArrowRight className="ml-2 h-5 w-5" />
               </a>
             </Button>

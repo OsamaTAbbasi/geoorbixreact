@@ -61,6 +61,52 @@ const About = () => {
                 </li>
               ))}
             </ul>
+
+            {/* CEO */}
+            <div className="mt-10 rounded-2xl border border-border/60 bg-background/60 p-6 md:p-7">
+              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
+                <img
+                  src="/hassan image.jpg"
+                  alt="Hassan Maqsood Abbasi"
+                  className="h-28 w-28 rounded-xl border border-border/60 object-cover"
+                  loading="lazy"
+                />
+                <div>
+                  <p className="text-sm uppercase tracking-widest text-primary/80">
+                    Founder & CEO
+                  </p>
+                  <h3 className="mt-2 text-2xl font-display font-semibold text-foreground">
+                    Hassan Maqsood Abbasi
+                  </h3>
+                  <p className="mt-3 text-muted-foreground leading-relaxed">
+                    GIS specialist with 6+ years of experience delivering national-scale
+                    telecom coverage analysis and geospatial data solutions. Focused on
+                    remote sensing, data-informed planning, and GIS-driven digital
+                    connectivity across Pakistan. Founder of GeoOrbix, building GIS and
+                    web platforms for better visualization and decision-making.
+                  </p>
+                  <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
+                    <a
+                      href="https://www.linkedin.com/in/hassan-maqsood-abbasi-53275418b"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-primary hover:underline"
+                    >
+                      LinkedIn
+                    </a>
+                    <a
+                      href="mailto:hassanmaqsoodabbasi@gmail.com"
+                      className="text-primary hover:underline"
+                    >
+                      hassanmaqsoodabbasi@gmail.com
+                    </a>
+                    <a href="tel:+923058998428" className="text-primary hover:underline">
+                      +92 305 8998428
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           {/* Right Column - Reasons Grid */}

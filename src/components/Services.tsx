@@ -6,15 +6,15 @@ const Services = () => {
       icon: MapPin,
       title: "GIS Solutions",
       description:
-        "Advanced geographic information systems for tax consultancy, mapping, and location intelligence that transform complex data into actionable insights.",
-      features: ["Tax Consultancy", "Custom Mapping", "Data Visualization", "Remote Sensing"],
+        "Advanced geographic information systems for consultancy, mapping, and location intelligence that transform complex data into actionable insights.",
+      features: ["GIS Consultancy", "Custom Mapping", "Data Visualization", "Remote Sensing"],
     },
     {
       icon: TrendingUp,
-      title: "Tax Consultancy",
+      title: "Consultancy",
       description:
-        "Practical tax advisory, reporting, and compliance support to keep decisions accurate and timely.",
-      features: ["Tax Planning", "Compliance Support", "Reporting", "Advisory"],
+        "Practical consultancy, reporting, and compliance support to keep decisions accurate and timely.",
+      features: ["GIS Consultancy", "Tax Consultancy", "Business Consultancy", "Compliance Support"],
     },
     {
       icon: MessageSquare,

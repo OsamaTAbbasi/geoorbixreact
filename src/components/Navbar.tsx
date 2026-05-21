@@ -35,7 +35,7 @@ const Navbar = () => {
             ))}
             <Button variant="hero" size="default" asChild>
               <a href={whatsappUrl} target="_blank" rel="noreferrer">
-                Chat with us on WhatsApp
+                Chat on WhatsApp
               </a>
             </Button>
             <Button variant="heroOutline" size="default" asChild>
@@ -70,7 +70,7 @@ const Navbar = () => {
               ))}
               <Button variant="hero" size="lg" className="mt-2" asChild>
                 <a href={whatsappUrl} target="_blank" rel="noreferrer" onClick={() => setIsOpen(false)}>
-                  Chat with us on WhatsApp
+                  Chat on WhatsApp
                 </a>
               </Button>
               <Button variant="heroOutline" size="lg" asChild>
