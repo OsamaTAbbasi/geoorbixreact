@@ -1,4 +1,5 @@
 import { Linkedin, Twitter, Github, Mail } from "lucide-react";
+import { Link } from "react-router-dom";
 import BrandMark from "./BrandMark";
 import { brandName, contactEmail, whatsappUrl } from "../lib/site";
 
@@ -28,15 +29,21 @@ const Footer = () => {
     ],
   };
 
+  const renderInternalLink = (href: string, label: string, className: string) => (
+    <Link to={href} className={className}>
+      {label}
+    </Link>
+  );
+
   return (
     <footer className="bg-secondary/50 border-t border-border/50">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid md:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="md:col-span-2">
-            <a href="#" className="block mb-4 max-w-full">
+            <Link to="/" className="block mb-4 max-w-full">
               <BrandMark />
-            </a>
+            </Link>
             <p className="text-muted-foreground mb-6 max-w-sm">
               GIS solutions, consultancy, and digital delivery support built to
               help teams move from data to outcomes.
@@ -72,12 +79,11 @@ const Footer = () => {
             <ul className="space-y-3">
               {links.services.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {renderInternalLink(
+                    link.href,
+                    link.name,
+                    "text-muted-foreground hover:text-primary transition-colors"
+                  )}
                 </li>
               ))}
             </ul>
@@ -91,12 +97,11 @@ const Footer = () => {
             <ul className="space-y-3">
               {links.company.map((link, index) => (
                 <li key={index}>
-                  <a
-                    href={link.href}
-                    className="text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.name}
-                  </a>
+                  {renderInternalLink(
+                    link.href,
+                    link.name,
+                    "text-muted-foreground hover:text-primary transition-colors"
+                  )}
                 </li>
               ))}
             </ul>
@@ -109,12 +114,16 @@ const Footer = () => {
             © {new Date().getFullYear()} {brandName}. All rights reserved.
           </p>
           <div className="flex items-center gap-6 text-sm">
-            <a href="/privacy" className="text-muted-foreground hover:text-primary transition-colors">
-              Privacy Policy
-            </a>
-            <a href="/terms" className="text-muted-foreground hover:text-primary transition-colors">
-              Terms of Service
-            </a>
+            {renderInternalLink(
+              "/privacy",
+              "Privacy Policy",
+              "text-muted-foreground hover:text-primary transition-colors"
+            )}
+            {renderInternalLink(
+              "/terms",
+              "Terms of Service",
+              "text-muted-foreground hover:text-primary transition-colors"
+            )}
           </div>
         </div>
       </div>
