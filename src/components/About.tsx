@@ -31,6 +31,24 @@ const About = () => {
     "Dedicated support throughout the engagement",
   ];
 
+  const advisors = [
+    {
+      name: "Naqash Ghaffar",
+      role: "Advisor, AI & Technology",
+      bio: "Naqash Ghaffar is a technology entrepreneur and product leader with extensive experience in artificial intelligence, product development, and digital innovation. As Co-Founder and CPTO at Dost AI, he has successfully led the development of technology-driven products and scalable solutions. At GeoOrbix, he provides strategic guidance on AI integration, intelligent geospatial systems, product strategy, and technology architecture, helping the company stay at the forefront of innovation.",
+    },
+    {
+      name: "Sikander Abbasi",
+      role: "Advisor, Software Engineering",
+      bio: "Sikander Abbasi is a software developer with expertise in web technologies, e-commerce platforms, and scalable digital solutions. His practical experience in designing and developing user-centric applications enables GeoOrbix to strengthen its software capabilities and product ecosystem. He advises the company on software architecture, application development, system scalability, and technology implementation to support sustainable growth.",
+    },
+    {
+      name: "Abdul Basit",
+      role: "Advisor, Marketing & Growth",
+      bio: "Abdul Basit is a marketing professional with experience in brand development, growth strategy, and customer engagement. As CMO at Snapp! Box, he has played an important role in driving business growth and strengthening brand visibility. At GeoOrbix, he provides guidance on market positioning, branding, customer acquisition, strategic partnerships, and business development initiatives, helping the company expand its reach and market presence.",
+    },
+  ];
+
   return (
     <section id="about" className="py-20 md:py-32 relative bg-secondary/30">
       <div className="absolute inset-0 grid-pattern opacity-20" />
@@ -62,51 +80,6 @@ const About = () => {
               ))}
             </ul>
 
-            {/* CEO */}
-            <div className="mt-10 rounded-2xl border border-border/60 bg-background/60 p-6 md:p-7">
-              <div className="flex flex-col gap-6 sm:flex-row sm:items-start">
-                <img
-                  src="/hassan image.jpg"
-                  alt="Hassan Maqsood Abbasi"
-                  className="h-28 w-28 rounded-xl border border-border/60 object-cover"
-                  loading="lazy"
-                />
-                <div>
-                  <p className="text-sm uppercase tracking-widest text-primary/80">
-                    Founder & CEO
-                  </p>
-                  <h3 className="mt-2 text-2xl font-display font-semibold text-foreground">
-                    Hassan Maqsood Abbasi
-                  </h3>
-                  <p className="mt-3 text-muted-foreground leading-relaxed">
-                    GIS specialist with 6+ years of experience delivering national-scale
-                    telecom coverage analysis and geospatial data solutions. Focused on
-                    remote sensing, data-informed planning, and GIS-driven digital
-                    connectivity across Pakistan. Founder of GeoOrbix, building GIS and
-                    web platforms for better visualization and decision-making.
-                  </p>
-                  <div className="mt-4 flex flex-wrap items-center gap-4 text-sm">
-                    <a
-                      href="https://www.linkedin.com/in/hassan-maqsood-abbasi-53275418b"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="text-primary hover:underline"
-                    >
-                      LinkedIn
-                    </a>
-                    <a
-                      href="mailto:hassanmaqsoodabbasi@gmail.com"
-                      className="text-primary hover:underline"
-                    >
-                      hassanmaqsoodabbasi@gmail.com
-                    </a>
-                    <a href="tel:+923058998428" className="text-primary hover:underline">
-                      +92 305 8998428
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           {/* Right Column - Reasons Grid */}
@@ -124,6 +97,75 @@ const About = () => {
                 </h3>
                 <p className="text-muted-foreground text-sm leading-relaxed">
                   {reason.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20">
+          <div className="mb-8 text-center">
+            <span className="text-primary font-medium text-sm uppercase tracking-wider">
+              Our Team
+            </span>
+            <h2 className="mt-3 text-3xl md:text-4xl font-display font-bold">
+              Leadership & Advisors
+            </h2>
+          </div>
+          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+            <div className="rounded-2xl border border-border/60 bg-background/60 p-6">
+              <img
+                src="/hassan image.jpg"
+                alt="Hassan Maqsood Abbasi"
+                className="mb-5 h-24 w-24 rounded-xl border border-border/60 object-cover"
+                loading="lazy"
+              />
+              <p className="text-sm uppercase tracking-widest text-primary/80">
+                Founder & CEO
+              </p>
+              <h3 className="mt-2 text-xl font-display font-semibold text-foreground">
+                Hassan Maqsood Abbasi
+              </h3>
+              <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                GIS specialist with 6+ years of experience delivering national-scale
+                telecom coverage analysis and geospatial data solutions. Focused on
+                remote sensing, data-informed planning, and GIS-driven digital
+                connectivity across Pakistan. Founder of GeoOrbix, building GIS and
+                web platforms for better visualization and decision-making.
+              </p>
+              <div className="mt-4 flex flex-wrap gap-3 text-sm">
+                <a
+                  href="https://www.linkedin.com/in/hassan-maqsood-abbasi-53275418b"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="text-primary hover:underline"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="mailto:hassanmaqsoodabbasi@gmail.com"
+                  className="text-primary hover:underline"
+                >
+                  Email
+                </a>
+                <a href="tel:+923058998428" className="text-primary hover:underline">
+                  Phone
+                </a>
+              </div>
+            </div>
+            {advisors.map((advisor) => (
+              <div
+                key={advisor.name}
+                className="rounded-2xl border border-border/60 bg-background/60 p-6"
+              >
+                <p className="text-sm uppercase tracking-widest text-primary/80">
+                  {advisor.role}
+                </p>
+                <h3 className="mt-2 text-xl font-display font-semibold text-foreground">
+                  {advisor.name}
+                </h3>
+                <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
+                  {advisor.bio}
                 </p>
               </div>
             ))}
