@@ -42,11 +42,6 @@ const About = () => {
       role: "Advisor, Software Engineering",
       bio: "Sikander Abbasi is a software developer with expertise in web technologies, e-commerce platforms, and scalable digital solutions. His practical experience in designing and developing user-centric applications enables GeoOrbix to strengthen its software capabilities and product ecosystem. He advises the company on software architecture, application development, system scalability, and technology implementation to support sustainable growth.",
     },
-    {
-      name: "Abdul Basit",
-      role: "Advisor, Marketing & Growth",
-      bio: "Abdul Basit is a marketing professional with experience in brand development, growth strategy, and customer engagement. As CMO at Snapp! Box, he has played an important role in driving business growth and strengthening brand visibility. At GeoOrbix, he provides guidance on market positioning, branding, customer acquisition, strategic partnerships, and business development initiatives, helping the company expand its reach and market presence.",
-    },
   ];
 
   return (
