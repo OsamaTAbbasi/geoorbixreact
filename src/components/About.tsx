@@ -114,12 +114,6 @@ const About = () => {
           </div>
           <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-2xl border border-border/60 bg-background/60 p-6">
-              <img
-                src="/hassan image.jpg"
-                alt="Hassan Maqsood Abbasi"
-                className="mb-5 h-24 w-24 rounded-xl border border-border/60 object-cover"
-                loading="lazy"
-              />
               <p className="text-sm uppercase tracking-widest text-primary/80">
                 Founder & CEO
               </p>
