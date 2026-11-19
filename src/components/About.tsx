@@ -121,7 +121,7 @@ const About = () => {
                 Hassan Maqsood Abbasi
               </h3>
               <p className="mt-3 text-sm text-muted-foreground leading-relaxed">
-                GIS specialist with 6+ years of experience delivering national-scale
+                GIS specialist with experience delivering national-scale
                 telecom coverage analysis and geospatial data solutions. Focused on
                 remote sensing, data-informed planning, and GIS-driven digital
                 connectivity across Pakistan. Founder of GeoOrbix, building GIS and
